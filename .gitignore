@@ -1,0 +1,10 @@
+configuration.php
+
+#
+# Editors / debuggers / other output files
+#
+*~
+*.bak
+*.orig
+*.patch
+callgrind.out.*
