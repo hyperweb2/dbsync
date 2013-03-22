@@ -1,0 +1,15 @@
+DS_URL=""
+
+# FTP
+FTP_USER=user
+FTP_PASSWD=password
+FTP_HOST=$SITE_HOST
+FTP_PATH='trunk/hw2'
+
+FILENAME='my_db.sql'
+REMOTEFILE=$FTP_PATH'/'$DIR$FILENAME'.gz'
+LOCALFILE=$1'/'$DIR$FILENAME'.gz'
+
+RDUMP_OPT=""
+
+

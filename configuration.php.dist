@@ -1,0 +1,42 @@
+<?php
+//[TODO] implements as class
+    // basic configuration entries
+    $secret			= 'foo'; 				// a password to prevent unauthorized access to the script
+    $from			= 'you@yoursite.com';			// email address for the "from" header
+    $to				= 'you@yoursite.com';			// address to which emails will be sent
+    $bundle_name	= 'backups';					// date/time will be appended to the bundle name
+    $email			= 0;							// 0 = don't send the completion email (error emails will still be sent)
+												    // 1 = send email notice upon successful completion, 
+    $debug			= 1;							// 0 = don't print to browser, use this when executing from cron!
+												    // 1 = print debug information to browser
+    $command		= 'mysqldump';          		// The mysqldump program name. Should work as is. If you get an empty
+												    // backup file try entering the full path to the dump program. e.g.
+												    // /user/bin/mysqldump
+
+    // the first database to be backed up - referred to in the user guide as"dbid=0"
+    $cfg[0]['dbhost']			= "";		// your mySQL server name
+    $cfg[0]['dbuser']			= "";		// your mySQL user name 
+    $cfg[0]['dbpass']			= "";	    // your mySQL password
+    $cfg[0]['dbname']			= "";	 	// database name
+    $cfg[0]['dbprefix']			= "";		// empty = backup all tables in the database
+												    // prefix string = backup only table names beginning with the string
+    $cfg[0]['optimize']			= '1';				// 1 = optimize tables, 0 = don't optimize them
+    $cfg[0]['extended_inserts']	= '1';				// 1 = one INSERT per table (smaller file), 0 = one INSERT per row
+    $cfg[0]['options']			= '';				// add any additional mysqldump optons if you know what you are doing
+
+    // uncomment and edit the below entries to add another database
+    // you can add any number of additional databases, each will be put in a separate output file
+    // each will be one ID number greater...$cfg[1] dbid=1, $cfg[2] dbid=2, etc.
+
+    /*
+    // 2nd database
+    $cfg[1]['dbhost']			= '';
+    $cfg[1]['dbuser']			= '';
+    $cfg[1]['dbpass']			= '';
+    $cfg[1]['dbname']			= '';
+    $cfg[1]['dbprefix']			= '';
+    $cfg[1]['optimize']			= '';
+    $cfg[1]['extended_inserts']	= '';
+    $cfg[1]['options']			= '';
+    */
+?>
